@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney's Musical Representation: A Critical Timeline</title>
+    
+    <!-- TimelineJS CSS -->
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Disney's Musical Representation of Non-Western Cultures</h1>
+            <p class="subtitle">From Orientalism to Commodified Inclusion: A Critical Timeline (1992-2019)</p>
+            <nav>
+                <a href="#timeline">Timeline</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About This Project</h2>
+                <p>
+                    This interactive timeline explores how Disney's musical representation of non-Western cultures 
+                    has evolved over three decades. Through analysis of musical soundtracks, scholarly critiques, 
+                    and interviews with involved musicians, we examine whether Disney's shift from exclusion to 
+                    collaboration represents genuine progress or merely sophisticated adaptation of cultural hegemony.
+                </p>
+                <p>
+                    <strong>Navigate the timeline below</strong> to explore key films, or <strong>click "Deep Dive"</strong> 
+                    on any entry to read detailed analysis.
+                </p>
+            </div>
+        </section>
+
+        <section id="timeline">
+            <div id="timeline-embed" style="width: 100%; height: 650px;"></div>
+        </section>
+
+        <section class="theory-section">
+            <div class="container">
+                <h2>Theoretical Framework</h2>
+                <div class="theory-grid">
+                    <div class="theory-card">
+                        <h3>Orientalism</h3>
+                        <p>Edward Said's concept describes the systematic Western construction of non-Western peoples as exotic, inferior "Others" to assert Western superiority.</p>
+                    </div>
+                    <div class="theory-card">
+                        <h3>Cultural Hegemony</h3>
+                        <p>Antonio Gramsci's framework explains how dominant groups maintain power through ideology rather than force, normalizing beliefs that reinforce ruling systems.</p>
+                    </div>
+                    <div class="theory-card">
+                        <h3>Commodity Racism</h3>
+                        <p>bell hooks' concept where ethnicity functions as "spice, seasoning that can liven up the dull dish that is mainstream white culture" without genuine authority transfer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 | Based on original research paper analyzing Disney's cultural representation through music</p>
+        </div>
+    </footer>
+
+    <!-- TimelineJS JavaScript -->
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    
+    <!-- Timeline Data -->
+    <script src="js/timeline-data.js"></script>
+    
+    <!-- Initialize Timeline -->
+    <script>
+        window.timeline = new TL.Timeline('timeline-embed', timelineData, {
+            scale_factor: 2,
+            initial_zoom: 2,
+            timenav_height: 200,
+            marker_height_min: 30
+        });
+    </script>
+</body>
+</html>
+
