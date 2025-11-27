@@ -20,7 +20,7 @@ const timelineData = {
                         <p><a href="pages/aladdin.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=TJhCLYKu7pU",
+                "url": "https://www.youtube.com/watch?v=W0Pf3SL6GKs",
                 "caption": "Arabian Nights - Note the use of generalized 'exotic' musical signifiers",
                 "credit": "Disney"
             },
