@@ -364,17 +364,65 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Conclusion Preview */
-.conclusion-preview {
+/* Discussion Section */
+.discussion-section {
+    background-color: white;
+    padding: 4rem 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.discussion-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.discussion-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.discussion-content p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 1.8rem;
+    text-align: justify;
+    color: #444;
+}
+
+.discussion-content h3 {
+    font-size: 1.6rem;
+    color: var(--accent-color);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.discussion-content strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Conclusion Section */
+.conclusion-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
     padding: 4rem 2rem;
 }
 
-.conclusion-preview h2 {
+.conclusion-section h2 {
     font-size: 2.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+}
+
+.conclusion-section h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .conclusion-box {
@@ -404,7 +452,7 @@ nav a:hover {
     border-top: 2px solid rgba(255,255,255,0.3);
     font-style: italic;
     font-size: 1.2rem;
-    text-align: left;
+    text-align: justify;
 }
 
 /* Footer */
