@@ -589,6 +589,88 @@ footer a:hover {
 }
 
 /* ============================================
+   EXPANDABLE CONTENT MODULE
+   ============================================ */
+
+.expandable-content {
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    background-color: var(--light-bg);
+}
+
+.expandable-content summary {
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    list-style: none;
+    user-select: none;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+.expandable-content summary::-webkit-details-marker {
+    display: none;
+}
+
+.expandable-content summary::before {
+    content: "▶";
+    display: inline-block;
+    margin-right: 0.75rem;
+    transition: transform 0.2s ease;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+}
+
+.expandable-content[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.expandable-content summary:hover {
+    background-color: #fff;
+    color: var(--accent-color);
+}
+
+.expandable-content .details-content {
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    border-top: 1px solid var(--border-color);
+    background-color: #fff;
+}
+
+.expandable-content .details-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.expandable-content .details-content p:first-child {
+    margin-top: 0.5rem;
+}
+
+.expandable-content .details-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.75rem;
+    margin-top: 1rem;
+}
+
+.expandable-content .details-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+.expandable-content .details-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.expandable-content .details-content a:hover {
+    border-bottom-color: var(--accent-color);
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 

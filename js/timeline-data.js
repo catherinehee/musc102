@@ -19,7 +19,7 @@ const timelineData = {
                         <p><a href="pages/peter-pan.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=xGKnCUnAsus",
+                "url": "https://www.youtube.com/embed/xGKnCUnAsus",
                 "caption": "What Made the Red Man Red? - Explicit racist caricature through music",
                 "credit": "Disney"
             },
@@ -38,7 +38,7 @@ const timelineData = {
                         <p><a href="pages/aladdin.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=W0Pf3SL6GKs",
+                "url": "https://www.youtube.com/embed/W0Pf3SL6GKs",
                 "caption": "Arabian Nights - Note the use of generalized 'exotic' musical signifiers",
                 "credit": "Disney"
             },
@@ -57,7 +57,7 @@ const timelineData = {
                         <p><a href="pages/pocahontas.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=a1qXXzPUBt8",
+                "url": "https://www.youtube.com/embed/a1qXXzPUBt8",
                 "caption": "Savages - False equivalence between colonizer and colonized",
                 "credit": "Disney"
             },
@@ -76,7 +76,7 @@ const timelineData = {
                         <p><a href="pages/mulan.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=-1S9pYmpkG8",
+                "url": "https://www.youtube.com/embed/-1S9pYmpkG8",
                 "caption": "Honor to Us All - Pentatonic scales as shorthand for 'Asian-sounding'",
                 "credit": "Disney"
             },
@@ -95,7 +95,7 @@ const timelineData = {
                         <p><a href="pages/lilo-stitch.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=Vx6bOdFqcOU",
+                "url": "https://www.youtube.com/embed/kXB-Ibr55LI?si=SPwQk_SwyjCz3DMt",
                 "caption": "Hawaiian Roller Coaster Ride - Elvis-inspired pop, not traditional Hawaiian music",
                 "credit": "Disney"
             },
@@ -111,10 +111,10 @@ const timelineData = {
                 "text": `<p><strong>Transition Period</strong></p>
                         <p>Frozen's superficial use of generalized Scandinavian motifs drew criticism for cultural insensitivity. The film used a generic "frozen north" aesthetic without meaningful engagement with Sámi culture, despite the region's Indigenous people.</p>
                         <p><strong>Impact:</strong> This criticism led Disney to implement a formalized collaborative model for its sequel, marking a shift in corporate strategy toward "managed inclusion."</p>
-                        <p><a href="pages/frozen.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
+                        <p><a href="pages/frozen2.html" class="deep-dive-link">→ Read More in Frozen II Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=moSFlvxnbgk",
+                "url": "https://www.youtube.com/embed/moSFlvxnbgk",
                 "caption": "Let It Go - Note the generic Nordic fantasy aesthetic without Sámi consultation",
                 "credit": "Disney"
             },
@@ -133,7 +133,7 @@ const timelineData = {
                         <p><a href="pages/moana.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=ubZrAmRxy_M",
+                "url": "https://www.youtube.com/embed/ubZrAmRxy_M",
                 "caption": "We Know The Way - Polynesian elements subordinated to Western framework",
                 "credit": "Disney"
             },
@@ -152,7 +152,7 @@ const timelineData = {
                         <p><a href="pages/frozen2.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=gIOyB9ZXn8s",
+                "url": "https://www.youtube.com/embed/gIOyB9ZXn8s",
                 "caption": "Into the Unknown - Features kulning instead of authentic Sámi joik",
                 "credit": "Disney"
             },
@@ -165,36 +165,17 @@ const timelineData = {
             },
             "text": {
                 "headline": "Encanto: Success with Persistent Problems",
-                "text": `<p><strong>Phase II: Most Successful Collaboration</strong></p>
+                "text": `<p><strong>Phase II: A Successful Collaboration?</strong></p>
                         <p>Encanto showcases Colombian music with composer Germaine Franco and Lin-Manuel Miranda. The all-Spanish "Dos Oruguitas" was acclaimed as the film's best song, and Colombian artists like Sebastián Yatra were featured.</p>
                         <p><strong>However:</strong> "We Don't Talk About Bruno" uses Cuban guajira rhythm, not Colombian. "Waiting on a Miracle" simplifies bambuco to generic "folk" for broad appeal. Cultural amalgamation persists.</p>
                         <p><a href="pages/encanto.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
             },
             "media": {
-                "url": "https://www.youtube.com/watch?v=bvWRMAU6V-c",
+                "url": "https://www.youtube.com/embed/bvWRMAU6V-c",
                 "caption": "We Don't Talk About Bruno - Uses Cuban guajira, not Colombian rhythms",
                 "credit": "Disney"
             },
             "group": "Phase II"
-        },
-        {
-            "start_date": {
-                "year": "2024",
-                "month": "12"
-            },
-            "text": {
-                "headline": "Conclusion: Hegemony Disguised as Diversity",
-                "text": `<p><strong>The Pattern Across Seven Decades</strong></p>
-                        <p>While Disney's methods evolved from crude stereotyping to formalized collaboration, <strong>the underlying logic of cultural hegemony remains intact</strong>. The shift demonstrates the adaptability of power:</p>
-                        <ul>
-                            <li><strong>1950s:</strong> Overt racist caricature</li>
-                            <li><strong>1990s:</strong> Orientalist "aural shorthand"</li>
-                            <li><strong>2010s-2020s:</strong> Consultative appropriation</li>
-                        </ul>
-                        <p><strong>The Verdict:</strong> Disney has reformed its methods without relinquishing structural control. The corporation invites "Others" into the room but has not handed over the baton. Western composers retain final authority, non-Western elements serve Western frameworks, and profits remain centralized.</p>
-                        <p><strong>True decolonization requires redistribution of creative authority, not just better consultation.</strong></p>`
-            },
-            "group": "Analysis"
         }
     ]
 };
