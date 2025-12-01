@@ -72,74 +72,257 @@ nav a:hover {
     padding: 0 2rem;
 }
 
-/* About Section */
-.about-section {
-    background-color: var(--light-bg);
+/* Thesis Section */
+.thesis-section {
+    background: linear-gradient(135deg, #fff 0%, var(--light-bg) 100%);
     padding: 4rem 2rem;
     border-bottom: 3px solid var(--accent-color);
 }
 
-.about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
-}
-
-.about-section p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    max-width: 900px;
-}
-
-/* Timeline Section */
-#timeline {
-    padding: 2rem 0;
-    background-color: white;
-}
-
-/* Theory Section */
-.theory-section {
-    background-color: white;
-    padding: 4rem 2rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.theory-section h2 {
-    font-size: 2rem;
+.thesis-section h2 {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--primary-color);
     text-align: center;
 }
 
-.theory-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.thesis-box {
+    background-color: white;
+    border-left: 6px solid var(--accent-color);
+    padding: 2.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
-.theory-card {
+.thesis-statement {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.thesis-statement strong {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.key-question {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+    background-color: #fff9e6;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+}
+
+.key-question p {
+    font-size: 1.15rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* Quick Navigation */
+.quick-nav {
+    padding: 3rem 2rem;
+    background-color: white;
+}
+
+.nav-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-card {
     background-color: var(--light-bg);
     padding: 2rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--accent-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.theory-card:hover {
+.nav-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: var(--accent-color);
 }
 
-.theory-card h3 {
+.nav-card h3 {
     font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.nav-card p {
+    font-size: 1rem;
+    margin: 0;
+    color: #666;
+}
+
+/* Timeline Section */
+#timeline {
+    padding: 4rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
     margin-bottom: 1rem;
+}
+
+.timeline-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+}
+
+.timeline-intro strong {
     color: var(--accent-color);
 }
 
-.theory-card p {
-    font-size: 1rem;
-    line-height: 1.6;
+/* Phases Section */
+.phases-section {
+    background-color: white;
+    padding: 4rem 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.phases-section h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.phases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.phase-card {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 5px solid;
+}
+
+.phase-card.phase-0 {
+    border-top-color: #6c757d;
+}
+
+.phase-card.phase-1 {
+    border-top-color: #dc3545;
+}
+
+.phase-card.phase-2 {
+    border-top-color: #007bff;
+}
+
+.phase-header {
+    margin-bottom: 1.5rem;
+}
+
+.phase-badge {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.phase-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 0.5rem;
+}
+
+.phase-card h4 {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.phase-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.phase-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.phase-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.phase-card li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Conclusion Preview */
+.conclusion-preview {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.conclusion-preview h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.conclusion-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.1);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border-left: 6px solid var(--accent-color);
+}
+
+.conclusion-box p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.conclusion-box strong {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.call-to-action {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(255,255,255,0.3);
+    font-style: italic;
 }
 
 /* Footer */
