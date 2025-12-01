@@ -46,24 +46,6 @@ const timelineData = {
         },
         {
             "start_date": {
-                "year": "1992",
-                "month": "11",
-                "day": "15"
-            },
-            "text": {
-                "headline": "\"A Whole New World\": Western Musical Hegemony",
-                "text": `<p>The film's romantic centerpiece abandons "exotic" signifiers entirely for a standard Broadway ballad. While the "Other" provides exotic flavor, Western musical hegemony structures the sonic core.</p>
-                        <p><strong>The Message:</strong> Non-Western music = atmosphere; Western music = emotional depth.</p>`
-            },
-            "media": {
-                "url": "https://www.youtube.com/watch?v=xYjFxFFdyyk",
-                "caption": "A Whole New World - Pure Broadway convention for the emotional centerpiece",
-                "credit": "Disney"
-            },
-            "group": "Phase I"
-        },
-        {
-            "start_date": {
                 "year": "1995",
                 "month": "6"
             },
@@ -115,6 +97,25 @@ const timelineData = {
             "media": {
                 "url": "https://www.youtube.com/watch?v=Vx6bOdFqcOU",
                 "caption": "Hawaiian Roller Coaster Ride - Elvis-inspired pop, not traditional Hawaiian music",
+                "credit": "Disney"
+            },
+            "group": "Transition"
+        },
+        {
+            "start_date": {
+                "year": "2013",
+                "month": "11"
+            },
+            "text": {
+                "headline": "Frozen: The Critique That Changed Everything",
+                "text": `<p><strong>Transition Period</strong></p>
+                        <p>Frozen's superficial use of generalized Scandinavian motifs drew criticism for cultural insensitivity. The film used a generic "frozen north" aesthetic without meaningful engagement with Sámi culture, despite the region's Indigenous people.</p>
+                        <p><strong>Impact:</strong> This criticism led Disney to implement a formalized collaborative model for its sequel, marking a shift in corporate strategy toward "managed inclusion."</p>
+                        <p><a href="pages/frozen.html" class="deep-dive-link">→ Read Full Analysis</a></p>`
+            },
+            "media": {
+                "url": "https://www.youtube.com/watch?v=moSFlvxnbgk",
+                "caption": "Let It Go - Note the generic Nordic fantasy aesthetic without Sámi consultation",
                 "credit": "Disney"
             },
             "group": "Transition"
