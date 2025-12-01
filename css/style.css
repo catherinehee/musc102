@@ -1,10 +1,16 @@
+/* ============================================
+   Disney Musical Representation Visual Essay
+   Inspired by The Pudding's minimalist aesthetic
+   ============================================ */
+
 :root {
-    --primary-color: #1a1a2e;
-    --secondary-color: #16213e;
-    --accent-color: #e94560;
-    --text-color: #333;
-    --light-bg: #f8f9fa;
-    --border-color: #ddd;
+    --primary-color: #111;
+    --secondary-color: #2a2a2a;
+    --accent-color: #c41e3a;
+    --text-color: #1a1a1a;
+    --light-bg: #fafafa;
+    --border-color: #e5e5e5;
+    --muted-text: #666;
 }
 
 * {
@@ -14,270 +20,428 @@
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    line-height: 1.8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
     color: var(--text-color);
     background-color: #fff;
     font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Header */
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    padding: 4rem 2rem 3rem;
+    background: #fff;
+    color: var(--primary-color);
+    padding: 5rem 2rem 4rem;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(233, 69, 96, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(233, 69, 96, 0.08) 0%, transparent 50%);
-    pointer-events: none;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .header-content {
-    position: relative;
-    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .header-content h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0.8rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.2rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    letter-spacing: -1.5px;
+    line-height: 1.1;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    font-style: italic;
-    opacity: 0.95;
-    margin-bottom: 2.5rem;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 300;
-    text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    font-size: 1.1rem;
+    color: var(--muted-text);
+    margin-bottom: 3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
-    margin: 0 0.75rem;
-    font-size: 0.95rem;
-    padding: 0.5rem 1.2rem;
-    border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
     font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 nav a:hover {
-    background-color: white;
-    color: var(--primary-color);
-    border-color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
 }
 
-/* Container */
+/* ============================================
+   MAIN CONTENT SECTIONS
+   ============================================ */
+
 .container {
-    max-width: 1200px;
+    max-width: 720px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 4rem 2rem;
 }
 
-/* Introduction Section */
+/* Introduction */
 .intro-section {
-    background-color: white;
+    background-color: #fff;
     padding: 4rem 2rem 2rem;
 }
 
 .intro-text {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto;
 }
 
 .intro-text p {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    margin-bottom: 1.8rem;
-    color: #444;
-    text-align: justify;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
 .drop-cap::first-letter {
-    font-size: 4rem;
-    font-weight: bold;
     float: left;
+    font-size: 5em;
     line-height: 0.8;
-    margin: 0.1rem 0.1rem 0 0;
-    color: var(--accent-color);
-    font-family: Georgia, serif;
-}
-
-.section-intro {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: 0 auto 3rem;
-    color: #555;
-    text-align: center;
-    font-style: italic;
+    font-weight: 700;
+    margin-right: 12px;
+    margin-top: 5px;
+    color: var(--primary-color);
 }
 
 /* Thesis Section */
 .thesis-section {
-    background: linear-gradient(135deg, #fff 0%, var(--light-bg) 100%);
+    background-color: var(--light-bg);
     padding: 4rem 2rem;
-    border-bottom: 3px solid var(--accent-color);
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .thesis-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
     text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .thesis-box {
-    background-color: white;
-    border-left: 6px solid var(--accent-color);
-    padding: 2.5rem;
-    margin: 2rem auto;
-    max-width: 900px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
 }
 
 .thesis-statement {
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: var(--primary-color);
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--text-color);
     font-weight: 400;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 2rem;
 }
 
 .thesis-statement strong {
-    color: var(--accent-color);
-    font-weight: 700;
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .key-question {
-    max-width: 900px;
-    margin: 2rem auto 0;
-    padding: 1.5rem;
-    background-color: #fff9e6;
-    border: 2px solid #ffd700;
-    border-radius: 8px;
-}
-
-.key-question p {
-    font-size: 1.15rem;
-    margin: 0;
-    color: var(--text-color);
-}
-
-/* Quick Navigation */
-.quick-nav {
-    padding: 3rem 2rem;
-    background-color: white;
-}
-
-.nav-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
+    max-width: 720px;
     margin: 0 auto;
+    padding: 2rem 0;
+    font-size: 1.05rem;
+    color: var(--muted-text);
 }
 
-.nav-card {
-    background-color: var(--light-bg);
-    padding: 2rem;
-    border-radius: 12px;
-    text-decoration: none;
+.key-question strong {
     color: var(--text-color);
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.nav-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border-color: var(--accent-color);
-}
-
-.nav-card h3 {
-    font-size: 1.4rem;
-    color: var(--accent-color);
-    margin-bottom: 0.5rem;
-}
-
-.nav-card p {
-    font-size: 1rem;
-    margin: 0;
-    color: #666;
+    font-weight: 600;
 }
 
 /* Timeline Section */
 #timeline {
-    padding: 4rem 2rem;
-    background-color: var(--light-bg);
+    padding: 4rem 0;
+    background-color: #fff;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .timeline-intro {
     text-align: center;
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    color: #555;
+    font-size: 1.05rem;
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    color: var(--muted-text);
+    line-height: 1.7;
 }
 
-.timeline-intro strong {
-    color: var(--accent-color);
+#timeline-embed {
+    height: 700px;
+    margin: 3rem auto;
+    max-width: 100%;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Phases Section */
+/* Discussion & Conclusion */
+.discussion-section,
+.conclusion-section {
+    background-color: #fff;
+    padding: 4rem 2rem;
+}
+
+.discussion-section h2,
+.conclusion-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discussion-section h3,
+.conclusion-section h3 {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.discussion-content,
+.conclusion-box {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.discussion-content p,
+.conclusion-box p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.conclusion-section {
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+/* ============================================
+   FILM DETAIL PAGES
+   ============================================ */
+
+.back-nav {
+    background-color: #fff;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.back-nav a {
+    color: var(--muted-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.back-nav a:hover {
+    color: var(--primary-color);
+}
+
+.film-header {
+    background: #fff;
+    color: var(--primary-color);
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.film-header h1 {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.film-header .year {
+    font-size: 1.2rem;
+    color: var(--muted-text);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.phase-tag {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background-color: var(--light-bg);
+    color: var(--muted-text);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.film-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.film-content section {
+    margin-bottom: 4rem;
+}
+
+.film-content h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.film-content h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin: 2.5rem 0 1.2rem;
+    font-weight: 600;
+}
+
+.film-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.film-content ul {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.film-content li {
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+}
+
+/* Quote Boxes */
+.quote-box {
+    background: var(--light-bg);
+    border-left: 3px solid var(--primary-color);
+    padding: 2rem;
+    margin: 2.5rem 0;
+}
+
+.quote-box p {
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.quote-box cite {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Key Points Boxes */
+.key-points {
+    background-color: #fffbf0;
+    border: 1px solid #e8d7a1;
+    padding: 2rem;
+    margin: 2.5rem 0;
+}
+
+.key-points h3 {
+    color: #8b7355;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.key-points ul {
+    margin-left: 1.5rem;
+}
+
+.key-points li {
+    margin-bottom: 0.8rem;
+}
+
+/* Video Containers */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 2.5rem 0;
+    border: 1px solid var(--border-color);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ============================================
+   PHASES & CARDS
+   ============================================ */
+
 .phases-section {
-    background-color: white;
+    background-color: #fff;
     padding: 4rem 2rem;
     border-top: 1px solid var(--border-color);
 }
 
 .phases-section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 3rem;
     color: var(--primary-color);
     text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .phases-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -286,8 +450,7 @@ nav a:hover {
 .phase-card {
     background-color: var(--light-bg);
     padding: 2rem;
-    border-radius: 12px;
-    border-top: 5px solid;
+    border-top: 3px solid;
 }
 
 .phase-card.phase-0 {
@@ -302,45 +465,37 @@ nav a:hover {
     border-top-color: #007bff;
 }
 
-.phase-header {
-    margin-bottom: 1.5rem;
-}
-
 .phase-badge {
     display: inline-block;
-    background-color: var(--accent-color);
+    background-color: var(--text-color);
     color: white;
     padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    font-weight: bold;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .phase-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--primary-color);
-    margin-top: 0.5rem;
+    margin: 1rem 0;
+    font-weight: 700;
 }
 
 .phase-card h4 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-.phase-card p {
-    font-size: 0.95rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .phase-description {
-    font-size: 1rem !important;
-    line-height: 1.7 !important;
-    font-weight: 400 !important;
-    text-align: justify;
-    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
 }
 
 .phase-card ul {
@@ -353,7 +508,7 @@ nav a:hover {
     padding-left: 1.5rem;
     position: relative;
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .phase-card li:before {
@@ -364,276 +519,94 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Discussion Section */
-.discussion-section {
-    background-color: white;
-    padding: 4rem 2rem;
-    border-top: 1px solid #e0e0e0;
-}
+/* ============================================
+   FOOTER
+   ============================================ */
 
-.discussion-section h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.discussion-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.discussion-content p {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    margin-bottom: 1.8rem;
-    text-align: justify;
-    color: #444;
-}
-
-.discussion-content h3 {
-    font-size: 1.6rem;
-    color: var(--accent-color);
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--accent-color);
-}
-
-.discussion-content strong {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-/* Conclusion Section */
-.conclusion-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    padding: 4rem 2rem;
-}
-
-.conclusion-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.conclusion-section h3 {
-    font-size: 1.8rem;
-    color: var(--accent-color);
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.conclusion-box {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: rgba(255,255,255,0.1);
-    padding: 2.5rem;
-    border-radius: 12px;
-    border-left: 6px solid var(--accent-color);
-}
-
-.conclusion-box p {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    margin-bottom: 1.8rem;
-    text-align: justify;
-}
-
-.conclusion-box strong {
-    color: var(--accent-color);
-    font-weight: 700;
-}
-
-.call-to-action {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 2px solid rgba(255,255,255,0.3);
-    font-style: italic;
-    font-size: 1.2rem;
-    text-align: justify;
-}
-
-/* Footer */
 footer {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--light-bg);
+    color: var(--muted-text);
     text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-/* Film Detail Pages */
-.film-header {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-    color: white;
     padding: 3rem 2rem;
-    text-align: center;
+    margin-top: 6rem;
+    border-top: 1px solid var(--border-color);
 }
 
-.film-header h1 {
-    font-size: 3rem;
+footer p {
     margin-bottom: 0.5rem;
-}
-
-.film-header .year {
-    font-size: 1.5rem;
-    opacity: 0.8;
-    margin-bottom: 1rem;
-}
-
-.film-header .phase-tag {
-    display: inline-block;
-    background-color: var(--accent-color);
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
     font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 
-.back-nav {
-    background-color: var(--light-bg);
-    padding: 1rem 2rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.back-nav a {
-    color: var(--accent-color);
+footer a {
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
+    font-weight: 500;
 }
 
-.back-nav a:hover {
-    text-decoration: underline;
+footer a:hover {
+    color: var(--accent-color);
 }
 
-.film-content {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-}
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
 
-.film-content h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-}
-
-.film-content h2:first-of-type {
-    margin-top: 0;
-}
-
-.film-content h3 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.film-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.8rem;
-    line-height: 1.9;
-    text-align: justify;
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    margin: 2.5rem 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.quote-box {
-    background-color: var(--light-bg);
-    border-left: 4px solid var(--accent-color);
-    padding: 2rem;
-    margin: 2.5rem 0;
-    font-style: italic;
-}
-
-.quote-box p {
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-
-.quote-box cite {
-    display: block;
-    text-align: right;
-    font-size: 0.95rem;
-    margin-top: 1.2rem;
-    font-style: normal;
-    color: #666;
-}
-
-.key-points {
-    background-color: #fff9e6;
-    border: 2px solid #ffd700;
-    border-radius: 8px;
-    padding: 2.5rem;
-    margin: 2.5rem 0;
-}
-
-.key-points h3 {
-    color: #b8860b;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-}
-
-.key-points ul {
-    margin-left: 1.5rem;
-}
-
-.key-points li {
-    margin-bottom: 0.8rem;
-    line-height: 1.7;
-}
-
-.key-points p {
-    text-align: left;
-    margin-bottom: 1.2rem;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .header-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .subtitle {
         font-size: 1rem;
     }
     
-    nav a {
-        display: block;
-        margin: 0.5rem auto;
-        max-width: 200px;
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
     }
     
-    .theory-grid {
-        grid-template-columns: 1fr;
+    .container,
+    .intro-text,
+    .thesis-box,
+    .discussion-content,
+    .film-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     
     .film-header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    
+    .phases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #timeline-embed {
+        height: 600px;
+    }
+    
+    .thesis-statement {
+        padding-left: 1.5rem;
     }
 }
 
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.8rem;
+        letter-spacing: -1px;
+    }
+    
+    .drop-cap::first-letter {
+        font-size: 4em;
+    }
+    
+    .thesis-statement {
+        font-size: 1.05rem;
+    }
+    
+    #timeline-embed {
+        height: 500px;
+    }
+}
