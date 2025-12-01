@@ -19,6 +19,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.7;
@@ -27,6 +31,67 @@ body {
     font-size: 18px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding-top: 60px; /* Space for sticky nav */
+}
+
+/* ============================================
+   STICKY NAVIGATION
+   ============================================ */
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.sticky-nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-logo {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: -0.3px;
+}
+
+.nav-logo:hover {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+    padding: 0.3rem 0;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
 }
 
 /* ============================================
@@ -36,7 +101,7 @@ body {
 header {
     background: #fff;
     color: var(--primary-color);
-    padding: 5rem 2rem 4rem;
+    padding: 6rem 2rem 4rem;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
@@ -57,36 +122,12 @@ header {
 .subtitle {
     font-size: 1.1rem;
     color: var(--muted-text);
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     font-weight: 400;
     line-height: 1.5;
     max-width: 680px;
     margin-left: auto;
     margin-right: auto;
-}
-
-nav {
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 0.9rem;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-}
-
-nav a:hover {
-    color: var(--accent-color);
-    border-bottom-color: var(--accent-color);
 }
 
 /* ============================================
@@ -552,18 +593,27 @@ footer a:hover {
    ============================================ */
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 110px; /* More space for wrapped nav */
+    }
+    
+    .sticky-nav-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+    
     .header-content h1 {
         font-size: 2rem;
     }
     
     .subtitle {
         font-size: 1rem;
-    }
-    
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
     }
     
     .container,
